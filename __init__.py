@@ -4,6 +4,14 @@ from vk_api.bot_longpoll import VkBotLongPoll, VkBotEventType
 from vk_api.upload import VkUpload
 import requests
 import config
+import os
+
+
+try:
+    os.mkdir("photo_archive")
+except:
+    pass
+
 
 token = config.token
 group_id = config.group_id
